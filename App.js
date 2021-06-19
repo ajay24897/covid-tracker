@@ -4,6 +4,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
 
 import Home from './src/Pages/Home';
 import Information from './src/Pages/Home/Information';
@@ -37,20 +39,22 @@ function Tabs() {
     </Tab.Navigator>
   );
 }
-
+const store = createStore();
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="Tabs"
-          screenOptions={{headerShown: false}}>
-          <Stack.Screen name="Information" component={Information} />
-          <Stack.Screen name="Tabs" component={Tabs} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator
+            initialRouteName="Tabs"
+            screenOptions={{headerShown: false}}>
+            <Stack.Screen name="Information" component={Information} />
+            <Stack.Screen name="Tabs" component={Tabs} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>
     </SafeAreaProvider>
   );
 }
