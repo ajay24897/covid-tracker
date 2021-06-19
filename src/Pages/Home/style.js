@@ -43,9 +43,9 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginVertical: 5,
     padding: '2.5%',
-    backgroundColor: '#fff',
+    backgroundColor: white,
     borderWidth: 1,
-    borderColor: '#fff',
+    borderColor: white,
   },
   boxShdow2: {
     shadowColor: 'rgba(0,0,0,0.5)',
@@ -65,7 +65,7 @@ export default StyleSheet.create({
   backBtn: {fontSize: 18, height: 30},
   infoCardText: {
     fontSize: 20,
-    color: '#000',
+    color: black,
   },
   bold: {
     fontWeight: 'bold',

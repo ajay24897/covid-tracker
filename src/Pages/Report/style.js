@@ -10,5 +10,9 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginVertical: 10,
   },
-  flex: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  flex: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

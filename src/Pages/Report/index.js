@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Button, TouchableHighlight, Dimensions} from 'react-native';
 import BottomSheet from 'react-native-simple-bottom-sheet';
 import {WebView} from 'react-native-webview';
+
 import {text1, text2, WHOLink} from '../../Constants';
 
 import styles from './style';
@@ -27,7 +28,6 @@ function Report() {
           </TouchableHighlight>
         </View>
       </BottomSheet>
-
       {/* {onClickOpen && ( */}
       <WebView
         source={{

@@ -25,7 +25,6 @@ function Information({route}) {
     </View>
   );
 }
-
 export default Information;
 
 function getCardsUI(title, value) {
