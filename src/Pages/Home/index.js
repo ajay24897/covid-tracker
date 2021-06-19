@@ -21,7 +21,7 @@ function Home() {
   const [data, setData] = useState([]);
   const [searchedText, setSearchedText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const {width, height} = Dimensions.get('window');
+  const {height} = Dimensions.get('window');
 
   useEffect(async () => {
     setIsLoading(true);
@@ -53,6 +53,7 @@ function Home() {
           {data.length > 0 &&
             data
               .filter(item => {
+                /// filter by Country
                 if (searchedText == '') {
                   return item;
                 } else if (

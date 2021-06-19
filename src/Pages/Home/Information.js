@@ -1,10 +1,11 @@
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-
 import {Text, View, ScrollView, TouchableOpacity} from 'react-native';
+
 import styles from './style';
 
 function Information({route}) {
+  // the data of perticular country only
   const {item} = route.params;
   const navigation = useNavigation();
 

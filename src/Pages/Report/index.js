@@ -4,7 +4,6 @@ import BottomSheet from 'react-native-simple-bottom-sheet';
 import {WebView} from 'react-native-webview';
 
 import {text1, text2, WHOLink} from '../../Constants';
-
 import styles from './style';
 
 function Report() {
@@ -13,6 +12,7 @@ function Report() {
   const {width, height} = Dimensions.get('window');
 
   return (
+    // bottomsheet is not working , i have to research for better library
     <View style={styles.flex}>
       <BottomSheet isOpen enabledContentGestureInteraction={false}>
         <View>
@@ -29,7 +29,7 @@ function Report() {
         </View>
       </BottomSheet>
       {/* {onClickOpen && ( */}
-      <WebView
+      <WebView /// webview rendering
         source={{
           uri: WHOLink,
         }}
